@@ -1,0 +1,97 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0d1b7e;
+  height: 60px;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar .logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #93ffea;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.navbar ul li a.active {
+  background-color: #1b31c7;
+}
+
+.navbar ul li a:hover {
+  background-color: #2d45f5;
+}
+
+.navbar .auth-buttons {
+  display: flex;
+}
+
+.navbar .auth-buttons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  padding: 8px 16px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background-color: #2d45f5;
+  transition: background 0.3s;
+}
+
+.navbar .auth-buttons a:hover {
+  background-color: #1b31c7;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul.open {
+    display: flex;
+  }
+
+  .auth-buttons {
+    display: none;
+  }
+}

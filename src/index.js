@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "./assets/css/data/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Login from "./components/Login";
@@ -12,19 +12,17 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+    ],
   },
-  {
-    path: "/register",
-    element: <Register />,
-  },
-  {
-    path: "/Login",
-    element: <Login />,
-  },
-  {
-    path:"/"
-    
-  }
 ]);
 root.render(
   <React.StrictMode>
