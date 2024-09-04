@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "../assets/css/data/App.css";
 
 const Register = () => {
   return (
@@ -8,7 +8,7 @@ const Register = () => {
         {/* <img src = {require('../assets/css/data/register.png')} alt="registerpc" className="registerp"></img> */}
         <form action="">
           <div className="mybb">
-            <h1>Register</h1>
+            <h1></h1>
             <div className="input-box">
               <input type="text" placeholder={"email"} required />
             </div>
