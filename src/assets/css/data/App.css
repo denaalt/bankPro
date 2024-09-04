@@ -13,19 +13,19 @@
 }
 
 .backround3 {
-  background-image: url("./backround3.png");
+  background-image: url("./Home.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
 }
 
-.mybb {
+/* .mybb {
   display: flex;
   flex-direction: column;
   border: #333 solid 2px;
   padding: 40px;
   border-radius: 40px;
-}
+} */
 
 .wrapper {
   display: flex;
