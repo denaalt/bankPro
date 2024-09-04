@@ -54,10 +54,10 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 30px;
   font-size: 16px;
-  color: #df74bd;
+  color: #ffffff;
 }
 .input-box input ::placeholder {
-  color: #d073a2;
+  color: #ffffff;
 }
 .input-box .icon {
   position: absolute;
@@ -73,7 +73,7 @@
   margin: -15px 0 15px;
 }
 .remember-forgot label input {
-  accent-color: #c94daa;
+  accent-color: #ffffff;
   margin-right: 4px;
 }
 .remember-forgot a {
