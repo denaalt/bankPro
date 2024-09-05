@@ -9,10 +9,10 @@ const Login = () => {
           <div className="mybb2 ">
             <h1>Login</h1>
             <div className="input-box2">
-              <input type="text" placeholder={"email"} required />
+              <input type="text" placeholder={"  Username"} required />
             </div>
             <div className="input-box2">
-              <input type="password" placeholder="password" required />
+              <input type="password" placeholder="  password" required />
             </div>
 
             <div className="remember-forgot2">

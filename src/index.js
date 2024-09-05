@@ -5,7 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Login from "./components/Login";
 import Register from "./components/Register";
+import Home from "./components/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Users from "./components/Users";
+import Transaction from "./components/Transaction";
+import Profile from "./components/Profile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
@@ -20,6 +24,22 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login />,
+      },
+      {
+        path: "/Home",
+        element: <Home />,
+      },
+      {
+        path: "/Users",
+        element: <Users />,
+      },
+      {
+        path: "/transactions",
+        element: <Transaction />,
+      },
+      {
+        path: "/Profile",
+        element: <Profile />,
       },
     ],
   },

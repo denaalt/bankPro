@@ -10,10 +10,10 @@ const Register = () => {
           <div className="mybb">
             <h1></h1>
             <div className="input-box">
-              <input type="text" placeholder={"email"} required />
+              <input type="text" placeholder={"  Username "} required />
             </div>
             <div className="input-box">
-              <input type="password" placeholder="password" required />
+              <input type="password" placeholder="   password" required />
             </div>
 
             <div className="remember-forgot">
@@ -33,8 +33,8 @@ const Register = () => {
           </div>
         </form>
       </div>
-      <h>hi</h>
-      <button>username</button>
+      <h></h>
+      <button></button>
     </div>
   );
 };
