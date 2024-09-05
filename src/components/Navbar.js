@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "../assets/css/data/Navbar.css";
-import userEvent from "@testing-library/user-event";
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Home");
@@ -21,19 +20,17 @@ const Navbar = () => {
         <span>DALENA</span>
       </div>
       <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
-        {["Home", "Transactions", "Users", "Profile", "Login", "Register"].map(
-          (item) => (
-            <li key={item}>
-              <a
-                href={`${item.toLowerCase()}`}
-                className={activeItem === item ? "active" : ""}
-                onClick={() => handleItemClick(item)}
-              >
-                {item}
-              </a>
-            </li>
-          )
-        )}
+        {["Home", "Transactions", "Users", "Profile"].map((item) => (
+          <li key={item}>
+            <a
+              href={`${item.toLowerCase()}`}
+              className={activeItem === item ? "active" : ""}
+              onClick={() => handleItemClick(item)}
+            >
+              {item}
+            </a>
+          </li>
+        ))}
       </ul>
       <div className="auth-buttons">
         <a href="login">Log in</a>
