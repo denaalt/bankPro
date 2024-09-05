@@ -9,10 +9,17 @@ const Register = () => {
           <div className="mybb">
             <h1></h1>
             <div className="input-box">
+<<<<<<< HEAD
               <input type="text" placeholder={"  Username"} required />
             </div>
             <div className="input-box">
               <input type="password" placeholder="  password" required />
+=======
+              <input type="text" placeholder={"  Username "} required />
+            </div>
+            <div className="input-box">
+              <input type="password" placeholder="   password" required />
+>>>>>>> 271c1d97ba8ff9c2570346b32c0f93d0884b9852
             </div>
 
             <div className="remember-forgot">
@@ -32,8 +39,8 @@ const Register = () => {
           </div>
         </form>
       </div>
-      <h>hi</h>
-      <button>username</button>
+      <h></h>
+      <button></button>
     </div>
   );
 };
