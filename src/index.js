@@ -10,6 +10,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Users from "./components/Users";
 import Transaction from "./components/Transaction";
 import Profile from "./components/Profile";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
@@ -46,7 +49,9 @@ const router = createBrowserRouter([
 ]);
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>
 );
 

@@ -17,12 +17,12 @@ const login = async (userInfo) => {
 
 const register = async (userInfo) => {
   try {
-    const formData = new ForkData();
+    const formData = new FormData();
     for (const key in userInfo) {
       formData.append(key, userInfo[key]);
     }
     const { data } = await instance.post(
-      "/mini-project/api/auth/login",
+      "/mini-project/api/auth/register",
       formData
     );
     setToken(data.token);
@@ -46,4 +46,4 @@ const getAllusers = async () => {
   return data;
 };
 
-export { login, me, logout, getAllusers };
+export { login, me, logout, getAllusers, register };

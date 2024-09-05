@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import "../assets/css/data/App.css";
 import { setToken } from "../api/storage";
+import UserContext from "../context/Usercontext";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 const Login = () => {
+  const [userInfo, setUserInfo] = useState({});
+  const [user, setUser] = useContext(UserContext);
+  const handleChange = (e) => {
+    setUserInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  // const { mutate: handleLogin } = useMutation({
+  //   mutationKey: ["login"],
+  //   mutationFn: () => Login(userInfo),
+  //   onSuccess: () => {
+  //     setUser(true);
+  //   },
+  // });
+
   return (
     <div>
       <div className="wrapper2 login">
