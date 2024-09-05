@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../assets/css/data/Navbar.css";
+import userEvent from "@testing-library/user-event";
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Home");

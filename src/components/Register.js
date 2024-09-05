@@ -5,15 +5,14 @@ const Register = () => {
   return (
     <div>
       <div className="wrapper register">
-        {/* <img src = {require('../assets/css/data/register.png')} alt="registerpc" className="registerp"></img> */}
         <form action="">
           <div className="mybb">
             <h1></h1>
             <div className="input-box">
-              <input type="text" placeholder={"email"} required />
+              <input type="text" placeholder={"  Username"} required />
             </div>
             <div className="input-box">
-              <input type="password" placeholder="password" required />
+              <input type="password" placeholder="  password" required />
             </div>
 
             <div className="remember-forgot">
@@ -27,7 +26,7 @@ const Register = () => {
 
             <div className="register-link">
               <p>
-                Don't have an account? <a href="#">Register</a>
+                Don't have an account?<a href="#">Register</a>
               </p>
             </div>
           </div>
