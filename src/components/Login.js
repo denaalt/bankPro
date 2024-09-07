@@ -24,7 +24,7 @@ const Login = () => {
       <div className="wrapper2 login">
         <form action="">
           <div className="mybb2 ">
-            <h1>Login</h1>
+            <h1></h1>
             <div className="input-box2">
               <input type="text" placeholder={"  Username"} required />
             </div>

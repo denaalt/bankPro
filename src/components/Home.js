@@ -3,7 +3,7 @@ import "../assets/css/data/App.css";
 //import Transaction from './Transaction'
 //import { useState } from 'react';
 
-const Home = () =>{ {
+const Home = () =>{ 
     
  const[transactionType,setTransactionType] = useState("");
  const [amount,setAmount] = useState(0);
@@ -34,22 +34,23 @@ const Home = () =>{ {
    // }
    // setAmount("");
         
-  //}
+  //}<div className="balance-info"> </div>
+  //<div className="transaction-type">
 
 
   return (
-    <div>
+  
      <div className=" wrapper3 Home">
-     <div className="header">
+     <div className="Transaction-box">
      
-        </div>
-        <div className="balance-info">
-          <h2>Your available balance:</h2>
-          <p>{balance}kd</p>
-          <small>Hidden for the sake of your dignity</small>
-        </div>
+      
+        
+          <h1>Your available balance:
+           kd</h1>
+
+        
         <form onSubmit={handleTransaction}>
-        <div className="transaction-type">
+       
         <label>
          <input
          type="radio"
@@ -76,15 +77,14 @@ const Home = () =>{ {
          value={amount}
          onChange={(e)=>
         setAmount(e.target.value) }
-         required
          />
-        </div>
         < button type='submit'>submit</button>
         </form>
         </div>
         </div>
+       
   );
 };
-}
+
 
 export default Home;
