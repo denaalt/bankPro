@@ -6,6 +6,7 @@ const Transaction = () => {
     <div>
         <div className="Transaction"></div>
         
+        
         </div>
   )
 }
