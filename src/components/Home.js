@@ -20,7 +20,7 @@ const Home = () =>{
   }
    setAmount(0);
 
-
+   
   }
   //const[balance,setBalance] = useState(0);
   //const [amount,setAmount] = useState('');

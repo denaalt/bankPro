@@ -40,7 +40,7 @@
 .mybb {
   display: flex;
   flex-direction: column;
- 
+
   padding: 40px;
   border-radius: 40px;
 }
@@ -186,7 +186,7 @@
 }
 
 .input-box2 input::placeholder {
-  color: #ffffff;
+  
 }
 
 .input-box2 .icon {
@@ -213,57 +213,88 @@
   outline: none;
   border-radius: 40px;
   align-items: center;
- 
+
   cursor: pointer;
   font-size: 16px;
   color: #333;
   font-weight: 700;
-  
 }
 
-
-button{
- padding: 10px 20px;
- background-color: #1C3CB8;
- color: white;
- border: none;
- border-radius: 5px;
- font-size: 1rem;
- cursor: pointer;
+button {
+  padding: 10px 20px;
+  background-color: #1c3cb8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
 }
-.Transaction-box{
+.Transaction-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
- width: 300px;
- margin: 100px auto;
- padding:20px ;
- border: 2px solid #00bfff;
- border-radius: 10px;
-color: white;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-text-align: center;
+  width: 300px;
+  padding: 20px;
+  border: 2px solid #00bfff;
+  border-radius: 10px;
+  color: rgb(249, 246, 246);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
-.Transaction-box form{
+.Transaction-box form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.Transaction-box input[type = "number"] {
-   width: 100%;
-   padding: 10px;
-   margin: 10px 0;
+.Transaction-box input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
   border: none;
   bottom: 5px;
 }
-.button:hover{
-  background-color: #162A8D;
+.button:hover {
+  background-color: #162a8d;
 }
+.profile-container{
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:transparent;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) ;
+  text-align: center;
+}
+h1 {
+ font-size: 24px;
+ margin-bottom: 20px;
+ color: #333;
+}
+label {
+ display: block;
+ margin-bottom: 15px;
+ text-align: left;
+ font-size: 16px;
+ color: #666;
+}
+input[type ="text"]
+input[type="number"]{
+width: 100%;
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 15px;
+box-sizing: border-box;
+}
+button {
+ width: 100%;
+ padding: 10px;
+ background-color: #007BFF;
+ border: none;
 
 
 
-
-
-
-
+}
