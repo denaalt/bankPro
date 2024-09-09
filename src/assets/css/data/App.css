@@ -19,16 +19,46 @@
   height: 100vh;
 }
 .Transaction {
-  background-image: url("./transaction.png");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  background-image: url("./Transactions.png");
+  background-size: contain;
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* margin-top: 20px; */
+  /* height: 100vh; */
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.TransactionItem {
+  display: flex;
+  justify-content: space-around;
+  width: 480px;
+  border: 2px solid blue;
+  border-radius: 90px;
+  
 }
 .Users {
   background-image: url("./Users.png");
-  background-size: cover;
+  /* background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100vh; */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.user {
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  margin: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 7px;
 }
 .Profile {
   background-image: url("./Profile.png");
@@ -186,7 +216,6 @@
 }
 
 .input-box2 input::placeholder {
-  
 }
 
 .input-box2 .icon {
@@ -245,6 +274,7 @@ button {
 .Transaction-box form {
   display: flex;
   flex-direction: column;
+
   align-items: center;
 }
 .Transaction-box input[type="number"] {
@@ -258,43 +288,39 @@ button {
 .button:hover {
   background-color: #162a8d;
 }
-.profile-container{
+.profile-container {
   width: 300px;
   margin: 0 auto;
   padding: 20px;
-  background-color:transparent;
+  background-color: transparent;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) ;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 h1 {
- font-size: 24px;
- margin-bottom: 20px;
- color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
 }
 label {
- display: block;
- margin-bottom: 15px;
- text-align: left;
- font-size: 16px;
- color: #666;
+  display: block;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 16px;
+  color: #666;
 }
-input[type ="text"]
-input[type="number"]{
-width: 100%;
-padding: 10px;
-margin-top: 5px;
-border: 1px solid #ccc;
-border-radius: 5px;
-font-size: 15px;
-box-sizing: border-box;
+input[type="text"] input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  box-sizing: border-box;
 }
 button {
- width: 100%;
- padding: 10px;
- background-color: #007BFF;
- border: none;
-
-
-
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
 }

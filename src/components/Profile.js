@@ -1,6 +1,8 @@
 import React from "react";
 import "../assets/css/data/App.css";
 import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { getAll } from "../api/auth";
 
 const Profile = () => {
     const [name , setName] = useState("")
@@ -10,6 +12,11 @@ const Profile = () => {
        setName (e.target.value);
        setIsDataChanged(true)
     }
+    const { data: profile } = useQuery({
+        queryKey: ["profile"],
+        queryFn: getAll,
+      });
+    
     const handleBalanceChange = (e) =>{
       setBalance (e.target.value)
       setIsDataChanged(true)
@@ -23,19 +30,19 @@ const Profile = () => {
       <div className="Profile">
         <div className="profile-container">
         <label>
-        Name:
-         <input 
+        Name:{profile?.username}
+         {/* <input 
          type="text"
          value={name}
          onChange={handleNameChange}
-         />
+         /> */}
         </label>
-         Balance:
-         <input
+         Balance: {profile?.balance}
+         {/* <input
          type="number"
          value={balance}
          onChange = {handleBalanceChange}
-         />
+         /> */}
          
          <button
          onClick={handleSave}

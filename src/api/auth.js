@@ -42,8 +42,18 @@ const me = async () => {
 };
 
 const getAllusers = async () => {
-  const { data } = await instance.get("/mini-project/api/auth/login");
+  const { data } = await instance.get("/mini-project/api/auth/users");
   return data;
 };
+  const getAlltransactions = async () => {
+  const { data } = await instance.get("/mini-project/api/transactions/my");
+  return data;
+};
+// 
+const getAll = async () => {
+  const { data } = await instance.get("/mini-project/api/auth/me");
+  return data;
+}
 
-export { login, me, logout, getAllusers, register };
+
+export { login, me, logout, getAllusers, register, getAlltransactions,getAll };

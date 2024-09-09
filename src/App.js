@@ -17,7 +17,7 @@ function App() {
     if (token) {
       setUser(true);
     }
-  }, []);
+  }, [user]);
   return (
     <UserContext.Provider value={[user, setUser]}>
       <div className="App">

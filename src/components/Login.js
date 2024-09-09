@@ -2,7 +2,13 @@ import React, { useContext, useState } from "react";
 import "../assets/css/data/App.css";
 import { setToken } from "../api/storage";
 import UserContext from "../context/Usercontext";
-import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import {
+  QueryClientProvider,
+  QueryClient,
+  useMutation,
+} from "@tanstack/react-query";
+import { login } from "../api/auth";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -10,14 +16,19 @@ const Login = () => {
   const handleChange = (e) => {
     setUserInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+  const navigate = useNavigate();
 
-  // const { mutate: handleLogin } = useMutation({
-  //   mutationKey: ["login"],
-  //   mutationFn: () => Login(userInfo),
-  //   onSuccess: () => {
-  //     setUser(true);
-  //   },
-  // });
+  const { mutate: handleLogin } = useMutation({
+    mutationKey: ["login"],
+    mutationFn: () => login(userInfo),
+    onSuccess: () => {
+      setUser(true);
+      navigate("/home");
+    },
+    onError: (e) => {
+      console.log(e);
+    },
+  });
 
   return (
     <div>
@@ -26,10 +37,22 @@ const Login = () => {
           <div className="mybb2 ">
             <h1></h1>
             <div className="input-box2">
-              <input type="text" placeholder={"  Username"} required />
+              <input
+                onChange={handleChange}
+                name="username"
+                type="text"
+                placeholder={"  Username"}
+                required
+              />
             </div>
             <div className="input-box2">
-              <input type="password" placeholder="  password" required />
+              <input
+                name="password"
+                onChange={handleChange}
+                type="password"
+                placeholder="  password"
+                required
+              />
             </div>
 
             <div className="remember-forgot2">
@@ -40,7 +63,15 @@ const Login = () => {
               <a href="#"> Forgot password? </a>
             </div>
 
-            <button type="submit">Login</button>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                handleLogin();
+              }}
+              type="submit"
+            >
+              Login
+            </button>
 
             <div className="register-link2">
               <p>
