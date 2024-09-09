@@ -68,8 +68,8 @@ const Register = () => {
 
             <button
               onClick={(e) => {
-                e.preventDefault();
-                handleRegister();
+                e.preventDefault(); // dont refresh
+                handleRegister(); //
               }}
               type="submit"
             >
