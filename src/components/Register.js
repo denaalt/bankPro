@@ -22,7 +22,7 @@ const Register = () => {
   return (
     <div>
       <div className="wrapper register">
-        <form action="">
+        <form action="" style={{ marginTop: 65, marginLeft: 150 }}>
           <div className="mybb">
             <h1></h1>
             <div className="input-box">

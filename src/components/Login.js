@@ -34,7 +34,7 @@ const Login = () => {
     <div>
       <div className="wrapper2 login">
         <form action="">
-          <div className="mybb2 ">
+          <div className="mybb2 " style={{ marginRight: 220 }}>
             <h1></h1>
             <div className="input-box2">
               <input

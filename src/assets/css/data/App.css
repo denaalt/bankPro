@@ -35,9 +35,9 @@
   display: flex;
   justify-content: space-around;
   width: 480px;
-  border: 2px solid blue;
-  border-radius: 90px;
-  
+  border: 2px solid #162a8d;
+  border-radius: 10px;
+  margin: 20px;
 }
 .Users {
   background-image: url("./Users.png");
@@ -53,12 +53,14 @@
   height: 300px;
   padding: 10px;
   margin: auto;
-  color: white;
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid white;
-  border-radius: 7px;
+  border: 2px solid #162a8d;
+  border-radius: 15px;
+  margin: 10px;
+  text-align: left;
 }
 .Profile {
   background-image: url("./Profile.png");
@@ -98,7 +100,7 @@
   height: 50px;
   display: flex;
   flex-direction: column;
-  margin: 30px 0;
+  margin: 10px 0;
 }
 
 .input-box input {
@@ -258,27 +260,52 @@ button {
   font-size: 1rem;
   cursor: pointer;
 }
-.Transaction-box {
+.wrapper3 {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 300px;
+  height: 100vh;
+}
+.Transaction-box {
+  background-color: transparent;
   padding: 20px;
-  border: 2px solid #00bfff;
   border-radius: 10px;
-  color: rgb(249, 246, 246);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  color: #0597da;
   text-align: center;
 }
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #f3ebeb;
+}
+.balance-box {
+  background-color: rgb(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* button[type="submit"] {
+  background-color: #4a6bf9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100px;
+}
+button[type="submit"]:hover {
+  background-color: #2a4ed6;
+} */
 .Transaction-box form {
   display: flex;
   flex-direction: column;
-
   align-items: center;
 }
 .Transaction-box input[type="number"] {
-  width: 100%;
+  width: 200px;
   padding: 10px;
   margin: 10px 0;
   border-radius: 10px;
@@ -288,26 +315,30 @@ button {
 .button:hover {
   background-color: #162a8d;
 }
+.Profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 .profile-container {
   width: 300px;
+  height: 15vh;
   margin: 0 auto;
   padding: 20px;
-  background-color: transparent;
+  color: #fff;
+  justify-content: center;
+  border: 2px solid #162a8d;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
-h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
-}
+
 label {
   display: block;
   margin-bottom: 15px;
-  text-align: left;
+  text-align: center;
   font-size: 16px;
-  color: #666;
+  color: #f7f2f2;
 }
 input[type="text"] input[type="number"] {
   width: 100%;
@@ -319,7 +350,7 @@ input[type="text"] input[type="number"] {
   box-sizing: border-box;
 }
 button {
-  width: 100%;
+  width: 70%;
   padding: 10px;
   background-color: #007bff;
   border: none;
