@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "../assets/css/data/App.css";
 import { useQuery } from "@tanstack/react-query";
 import { getAll } from "../api/auth";
-//import Transaction from './Transaction'
-//import { useState } from 'react';
 
 const Home = () => {
   const { data: profile } = useQuery({
@@ -13,38 +11,27 @@ const Home = () => {
 
   const [transactionType, setTransactionType] = useState("");
   const [amount, setAmount] = useState(0);
-  //  const[balance,setBalance] = useState(0);
+  const [balance, setBalance] = useState(profile?.balance || 0);
+
   const handleTransaction = (e) => {
     e.preventDefault();
-    if (transactionType === "deposit") {
-      // setBalance(balance + parseFloat(amount));
-    } else if (transactionType === "withraw" && amount) {
-      // setBalance(balance - parseFloat(amount));
+    const transactionAmount = parseFloat(amount);
+
+    if (transactionType == "deposit") {
+      setBalance(balance + transactionAmount);
+    } else if (transactionType == "withdraw" && transactionAmount <= balance) {
+      setBalance(balance - transactionAmount);
     } else {
-      alert("Invalid Transaction");
+      alert("Invalid Transaction or Insufficient Balance");
     }
+
     setAmount(0);
   };
 
-  //const[balance,setBalance] = useState(0);
-  //const [amount,setAmount] = useState('');
-  //const[transactionType,setTransactionType] = useState("deposit");
-  // const handleTransaction = (e) =>{
-  // e.preventDefault();
-  // if (transactionType ==="deposit"){
-  // setBalance(balance + parseFloat(amount));
-  //}else{
-  // setBalance(balance - parseFloat(amount));
-  // }
-  // setAmount("");
-
-  //}<div className="balance-info"> </div>
-  //<div className="transaction-type">
-
   return (
-    <div className=" wrapper3 Home">
+    <div className="wrapper3 Home">
       <div className="Transaction-box">
-        <h1>Your available balance : {profile?.balance}</h1>
+        <h1>Your available balance: {balance}</h1>
         <p>Hidden for the sake of your dignity</p>
 
         <form onSubmit={handleTransaction}>
@@ -55,7 +42,7 @@ const Home = () => {
               value="deposit"
               onChange={(e) => setTransactionType(e.target.value)}
             />
-            deposit
+            Deposit
           </label>
           <label>
             <input
@@ -64,7 +51,7 @@ const Home = () => {
               value="withdraw"
               onChange={(e) => setTransactionType(e.target.value)}
             />
-            withdraw
+            Withdraw
           </label>
           <input
             type="number"
@@ -72,7 +59,7 @@ const Home = () => {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
-          <button type="submit">submit</button>
+          <button type="submit">Submit</button>
         </form>
       </div>
     </div>
