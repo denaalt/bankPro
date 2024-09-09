@@ -19,6 +19,7 @@ const Navbar = () => {
         <img src="./assets/logo.png" alt="Logo" />
         <span>DALENA</span>
       </div>
+
       <ul className={`menu ${isMenuOpen ? "open" : ""}`}>
         {["Home", "Transactions", "Users", "Profile"].map((item) => (
           <li key={item}>
@@ -35,6 +36,8 @@ const Navbar = () => {
       <div className="auth-buttons">
         <a href="login">Log in</a>
         <a href="register">Register</a>
+
+        <div></div>
       </div>
       <div className="menu-toggle" onClick={toggleMenu}>
         <span>☰</span>
