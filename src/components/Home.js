@@ -19,13 +19,14 @@ const Home = () => {
     mutationFn: () => depositOrWithdraw(transactionType, amount),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["profile"] });
+      setAmount(0);
     },
   });
 
-  const handleTransaction = async (e) => {
+  const handleTransaction = (e) => {
     e.preventDefault();
-    await mutate();
-    setAmount(0);
+    mutate();
+    // setAmount(0);
   };
 
   return (
