@@ -22,14 +22,14 @@ const Register = () => {
   return (
     <div>
       <div className="wrapper register">
-        <form action="" style={{ marginTop: 65, marginLeft: 150 }}>
+        <form action="" style={{ marginTop: 70, marginLeft: 150 }}>
           <div className="mybb">
             <h1></h1>
             <div className="input-box">
               <input
                 onChange={handleChange}
                 type="text"
-                placeholder={"username"}
+                placeholder={"  username"}
                 name="username"
                 required
               />
@@ -38,7 +38,7 @@ const Register = () => {
               <input
                 onChange={handleChange}
                 type="password"
-                placeholder="password"
+                placeholder="  password"
                 name="password"
                 required
               />

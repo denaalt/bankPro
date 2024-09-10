@@ -17,7 +17,12 @@ const Transaction = () => {
   return (
     <div>
       <div className="Transaction">
-        <input name="search" onChange={(e) => setSearch(e.target.value)} />
+        <input
+          className="search"
+          style={{ margin: 25 }}
+          name="search"
+          onChange={(e) => setSearch(e.target.value)}
+        />
         <div>{transactionsListDis}</div>
       </div>
     </div>

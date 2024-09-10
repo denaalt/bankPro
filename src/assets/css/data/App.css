@@ -19,6 +19,7 @@
   height: 100vh;
 }
 .Transaction {
+  min-height: 100vh;
   background-image: url("./Transactions.png");
   background-size: contain;
   /* background-repeat: no-repeat; */
@@ -30,6 +31,23 @@
   justify-content: center;
   align-items: center;
   color: white;
+}
+.search {
+  border: 2px solid rgb(255, 255, 255, 0.3);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.089);
+  padding: 10px 26px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, width 0.3s ease;
+}
+.image {
+  border: 2px solid color #162a8d;
+  border-radius: 10px;
+  display: flex;
+
+  justify-content: center;
 }
 .TransactionItem {
   display: flex;
